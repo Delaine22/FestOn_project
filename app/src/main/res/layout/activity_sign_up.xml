@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/menuicone"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Menu Icon"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Logo do App -->
+    <TextView
+        android:id="@+id/app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FestOn"
+        android:textColor="#ff6600"
+        android:textSize="36dp"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintTop_toBottomOf="@id/menuicone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/username_campo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/sinza"
+        android:padding="8dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/outline_person_24"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Username"
+            android:textSize="20dp"
+            android:paddingStart="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <!-- Campo de Texto - Email -->
+    <LinearLayout
+        android:id="@+id/Email_campo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#444444"
+        android:padding="8dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/username_campo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/outline_alternate_email_24"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="E-mail"
+            android:textSize="20dp"
+            android:paddingStart="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <!-- Campo de Texto - Password -->
+    <LinearLayout
+        android:id="@+id/pass_campo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#444444"
+        android:padding="8dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/Email_campo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_lock_24"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20dp"
+            android:paddingStart="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <!-- Botão Sign Up -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:text="Sign up"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF6600"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@+id/pass_campo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="8dp" />
+
+
+    <!--CONSTRUCAO DE BOTTOM NAVBAR-->
+
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:background="@color/sinza"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <!--ICONE HOME-->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/outline_home_24"
+            android:contentDescription="Home Icon"
+            android:layout_margin="16dp"/>
+
+        <!-- Ícone de Busca -->
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_search_24"
+            android:contentDescription="Search Icon"
+            android:layout_margin="16dp"/>
+
+        <!-- Ícone de Carrinho -->
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_add_shopping_cart_24"
+            android:contentDescription="Cart Icon"
+            android:layout_margin="16dp"/>
+
+        <!-- Ícone de Favoritos -->
+        <ImageView
+            android:id="@+id/favoritesIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sharp_heart_check_24"
+            android:contentDescription="Favorites Icon"
+            android:layout_margin="16dp"/>
+
+        <!-- Ícone de Perfil -->
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/outline_person_24"
+            android:contentDescription="Profile Icon"
+            android:layout_margin="16dp"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
